@@ -36,6 +36,7 @@ def login(request):
             if usuario.password == password:
                 # Guardamos el ID del usuario en la sesión para "loguearlo"
                 request.session['usuario_id'] = usuario.usuario_id
+                request.session['nombre'] = usuario.nombre
                 return redirect('libros:index')  # Redirige a la página principal u otra deseada
             else:
                 error = "Email o contraseña incorrectos."
