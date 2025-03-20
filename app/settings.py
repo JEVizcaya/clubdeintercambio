@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-g$x(%i@^%)6-4=4nd_ei^11r_5cfwfdpnsh=!1swa&p%d2^ad6'
+SECRET_KEY = 'django-insecure-hqbqmp()zb!_5%*&+12jhl4t%s8-a!e0_0#42farj_jf5z^sgy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -32,8 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "prestamos.apps.PrestamosConfig",
-    "usuarios.apps.UsuariosConfig",
     "libros.apps.LibrosConfig",
+    "usuarios.apps.UsuariosConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -119,7 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+MEDIA_URL = '/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
