@@ -8,7 +8,8 @@ class Libro(models.Model):
     descripcion = models.TextField()
     # Relación: cada libro pertenece a un usuario
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-
+    #relacion libro prestamo
+   
     def __str__(self):
         return self.titulo
 
