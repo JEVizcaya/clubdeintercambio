@@ -5,7 +5,7 @@ from .models import Usuario
 # Create your views here.
 
 def index(request):
-    return HttpResponse("hola desde index")
+    return HttpResponse("hola desde indexcd..")
 
 def registro(request):
     if request.method == "POST":
@@ -36,7 +36,7 @@ def login(request):
             if usuario.password == password:
                 # Guardamos el ID del usuario en la sesión para "loguearlo"
                 request.session['usuario_id'] = usuario.usuario_id
-                return redirect('home')  # Redirige a la página principal u otra deseada
+                return redirect('libros:index')  # Redirige a la página principal u otra deseada
             else:
                 error = "Email o contraseña incorrectos."
         except Usuario.DoesNotExist:
