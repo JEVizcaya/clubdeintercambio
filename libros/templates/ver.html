@@ -11,6 +11,7 @@
     <table>
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Usuario</th>
                 <th>Fecha de prestamo</th>
                 <th>Fecha de devolucion</th>
@@ -20,10 +21,11 @@
         <tbody>
             {% for prestamo in prestamos %}
                 <tr>
+                    <td>{{ prestamo.prestamos_id }}</td>
                     <td>{{ prestamo.usuario }}</td>
-                    <td>{{ prestamo.fecha_prestamo }}</td>
+                    <td>{{ prestamo.fecha_solicitud}}</td>
                     <td>{{ prestamo.fecha_devolucion }}</td>
-                    <td></td>
+                    <td>{{prestamo.estado}}</td>
                     
                 </tr>
             {% endfor %}
