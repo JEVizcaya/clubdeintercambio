@@ -23,3 +23,8 @@ def alta_libro(request):
     else:
         form = LibroForm()
     return render(request, 'alta_libro.html', {'form': form})
+
+def borrar(request, libro_id):
+    libro = Libro.objects.get(libro_id=libro_id)
+    libro.delete()
+    return redirect('libros:index')
