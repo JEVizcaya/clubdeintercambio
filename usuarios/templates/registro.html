@@ -1,17 +1,22 @@
 <!-- usuarios/templates/usuarios/registro.html -->
-
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="{% static 'css/usuarios/registro.css' %}">
 </head>
+
 <body>
+    <div class="container">
     <h1>Registro de Usuario</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Registrarse</button>
+        <p>Ya tienes cuenta. Logueate <a href="{% url 'usuarios:login' %}">   Aqui</a></p>
     </form>
+</div>
 </body>
 </html>

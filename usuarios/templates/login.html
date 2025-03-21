@@ -1,10 +1,14 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="{% static 'css/usuarios/login.css' %}">
 </head>
 <body>
+    <div class="container">
     <h1>Iniciar Sesión</h1>
     
     {% if error %}
@@ -24,6 +28,8 @@
         </div>
         <br>
         <button type="submit">Ingresar</button>
+        <p>No tienes cuenta. Registrate <a href="{% url 'usuarios:registro' %}">   Aqui</a></p>
     </form>
+</div>
 </body>
 </html>
