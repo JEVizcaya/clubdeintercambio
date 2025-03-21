@@ -34,8 +34,8 @@
                     <td>{{ prestamo.fecha_devolucion }}</td>
                     <td>{{prestamo.estado}}</td>
                     <td>
-                        <a href="{% url 'prestamos:aceptar' prestamo.prestamos_id %}"><button class="btn btn-success" type="submit">Aceptar</button></a>
-                        <a href="{% url 'prestamos:cancelar' prestamo.prestamos_id %}"><button class="btn btn-danger" type="submit">Rechazar</button></a>
+                        <a class="create-btn aceptar" href="{% url 'prestamos:aceptar' prestamo.prestamos_id %}">Aceptar</a>
+                        <a class="create-btn rechazar" href="{% url 'prestamos:cancelar' prestamo.prestamos_id %}">Rechazar</a>
                     </td>
                     
                 </tr>

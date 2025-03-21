@@ -101,5 +101,13 @@ a.create-btn:hover {
     background: #16a085;
 }
 
+a.aceptar{
+   background-color: green;
+}
+
+a.rechazar{
+    background-color: red;
+}
+
 
 
