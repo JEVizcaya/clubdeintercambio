@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/libros/index.css' %}">
+{% endblock %}
 {% block content %}
 
 
@@ -15,7 +20,27 @@
     <a href="{% url 'prestamos:solicitar' libro.libro_id%}"><i class="fa-solid fa-basket-shopping"></i></a>
 </div>
 {% endfor %}
+<hr>
+<h2>Solicitudes realizadas</h2>
+<table>
+    <thead>
+        <th>Titulo</th>
+        <th>Fecha solicitud</th>
+        <th>Fecha devolucion</th>
+        <th>Estado</th>
+    </thead>
+    <tbody>
+        {% for prestamo in solicitudes_prestamos %}
+        <tr>
+            <td>{{ prestamo.libro.titulo }}</td>
+            <td>{{ prestamo.fecha_solicitud }}</td>
+            <td>{{ prestamo.fecha_devolucion }}</td>
+            <td>{{ prestamo.estado.descripcion }}</td>
 
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 </div>
 
 

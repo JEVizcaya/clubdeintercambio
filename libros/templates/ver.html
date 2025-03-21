@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/libros/index.css' %}">
+{% endblock %}
 {% block content %}
+<div class="container">
     <h3>Detalle del libro</h3>
     <hr>
     <h4>{{ libro.titulo }}</h4>
@@ -16,6 +22,7 @@
                 <th>Fecha de prestamo</th>
                 <th>Fecha de devolucion</th>
                 <th>Estado</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -26,12 +33,17 @@
                     <td>{{ prestamo.fecha_solicitud}}</td>
                     <td>{{ prestamo.fecha_devolucion }}</td>
                     <td>{{prestamo.estado}}</td>
+                    <td>
+                        <a href="{% url 'prestamos:aceptar' prestamo.prestamos_id %}"><button class="btn btn-success" type="submit">Aceptar</button></a>
+                        <a href="{% url 'prestamos:cancelar' prestamo.prestamos_id %}"><button class="btn btn-danger" type="submit">Rechazar</button></a>
+                    </td>
                     
                 </tr>
             {% endfor %}
         </tbody>
     </table>
     <hr>
-    <a href="{% url 'libros:index' %}">Volver</a>
+    <a class="create-btn" href="{% url 'libros:index' %}">Volver</a>
+</div>
 {% endblock %}
 
