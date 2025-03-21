@@ -12,7 +12,7 @@ body {
 
 /* Contenedor principal */
 .container {
-    background-color: #ffffff;
+    background-color:green;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 40px;
@@ -25,7 +25,7 @@ body {
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333333;
+    color: white;
 }
 
 /* Estilo de los campos de formulario */
@@ -38,7 +38,7 @@ label {
     display: block;
     font-size: 14px;
     margin-bottom: 8px;
-    color: #555555;
+    color: White;
 }
 
 input {
@@ -75,10 +75,11 @@ button:hover {
 p {
     font-size: 14px;
     margin-top: 10px;
+    color: white;
 }
 
 a {
-    color: #0000ff;
+    color: red;
     text-decoration: none;
 }
 

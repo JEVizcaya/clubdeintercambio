@@ -5,6 +5,17 @@
 
 <div class="container">
 <h3>Lista de préstamos</h3>
+<hr>
+<!--mostrar libros-->
+{% for libro in libros %}
+<div>
+    <h2>{{ libro.titulo }}</h2>
+    <p>{{ libro.descripcion }}</p>
+    <img src="{{ libro.imagen.url }}" alt="" width="100">
+    <a href="{% url 'prestamos:solicitar' libro.libro_id%}"><i class="fa-solid fa-basket-shopping"></i></a>
+</div>
+{% endfor %}
+
 </div>
 
 
